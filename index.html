@@ -15,33 +15,22 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Cypress overview</h1>
+        <h1>Cypress: painless web testing</h1>
     </header>
 
-    <section class="slide" id="cover">
-        <figure>
-            <img class="cover" src="pictures/cypress-logo.png">
-        </figure>
-        <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
+    <section class="slide">
+        <h2 class="shout" style="font-size: 80px">Modern e2e testing with Cypress.io <br>
+        <div style="display: flex; margin-top: 50px;">
+            <img src="pictures/angular-512.png" height="35px" width="35px">
+            <span style="font-size: 30px">Angular Minsk #2</span>
+        </div>
+        </h2>
+    </section>
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
-
-            #cover p a {
-                color: white;
-            }
-        </style>
+    <section class="slide">
+        <h2 class="shout" style="font-size: 80px">
+            Greeting slide
+        </h2>
     </section>
 
     <section class="slide">
@@ -53,6 +42,21 @@
             <li>How do we use Cypress</li>
             <li>Trade offs</li>
         </ol>
+    </section>
+
+    <section class="slide" id="cover">
+        <figure>
+            <img class="cover" src="pictures/fm.png">
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2>Recap of Front-end Development in 2018</h2>
+        <blockquote>
+            <p>Many realize that end to end testing is the starting point of doing tests correctly in large part due to Cypress (i.e. Cypress first, then Jest).</p>
+        </blockquote>
+        <a href="https://frontendmasters.com/books/front-end-handbook/2019/#1.1">Front-end Developer Handbook 2019
+        </a>
     </section>
 
     <section class="slide">
@@ -105,20 +109,18 @@
                     <li>Spying & Stubbing on DOM API</li>
                 </ol>
         </section>
-
+        
         <section class="slide">
                 <h2>Querying elements</h2>
-                <pre>
-                    <code>cy.get('#element')</code>
-                    <code>  .then(el => doSomethingAwesome(el))</code>
-                </pre>
-        </section>
-
-        <section class="slide">
-                <h2>Querying elements</h2>
-                <pre>
-                    <code>cy.get('.main').contains('New Post')</code>
-                </pre>
+                <div style="display: flex">
+                        <pre>
+                                <code>cy.get('.main').contains('New Post')</code>
+                                <code> </code>
+                                <code>cy.get('#element')</code>
+                                <code>  .then(el => doSomethingAwesome(el))</code>
+                            </pre>
+                <span class="next"><img src="pictures/jquery.png" alt="" height="200" width="200"></span>
+                </div>
         </section>
 
         <section class="slide">
