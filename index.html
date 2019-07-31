@@ -10,6 +10,18 @@
             --slide-ratio: calc(16 / 9);
             --color-key: #16375A
         }
+        .slide::after {
+            display: none;
+        }
+        .center-slide {
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        .mt-50 {
+            margin-top: 50px;
+        }
+        
     </style>
 </head>
 <body class="shower list">
@@ -36,13 +48,50 @@
     <section class="slide">
         <h2>Agenda</h2>
         <ol>
-            <li>Cypress at a glance</li>
-            <li>Differences from Selenium</li>
-            <li>Core concepts & features</li>
-            <li>How do we use Cypress</li>
-            <li>Trade offs</li>
+            <li>Why do(n't) we test?</li>
+            <li>E2E testing tools</li>
+            <li>Cypress core concepts & features</li>
+            <li>Experience with Cypress</li>
+            <li>Ups & downs</li>
         </ol>
     </section>
+
+    <section class="slide" id="cover">
+        <figure>
+            <img class="cover" src="pictures/pyramid.png">
+        </figure>
+    </section>
+
+    <section class="slide" id="cover">
+        <figure>
+            <img class="cover" src="pictures/pyramid2.png">
+        </figure>
+    </section>
+
+    <section class="slide" id="cover">
+        <figure>
+            <img class="cover" src="pictures/errors.jpg">
+        </figure>
+    </section>
+
+    <section class="slide" id="cover">
+        <h2>Choose your side</h2>
+        <figure>
+            <img class="cover" src="pictures/ptcy.png">
+        </figure>
+    </section>
+
+    <section class="slide" id="cover">
+        <figure>
+            <img class="cover" src="pictures/ptissue.png">
+        </figure>
+    </section>
+
+    <section class="slide" id="cover">
+            <figure>
+                <img class="cover" src="pictures/man.jpg">
+            </figure>
+        </section>
 
     <section class="slide" id="cover">
         <figure>
@@ -59,7 +108,7 @@
         </a>
     </section>
 
-    <section class="slide">
+    <section class="slide center-slide">
             <h2>Installing Cypress</h2>
             <pre>
                 <code>npm install cypress --save-dev</code>
@@ -67,47 +116,54 @@
             </pre>
     </section>
 
-    <section class="slide">
-            <h2>Your first simple test</h2>
-            <pre>
-                    <code>describe('Post Resource', function() {</code>
-                    <code>  it('Creating a New Post', function() {</code>
-                    <code>    cy.visit('/posts/new')</code>
-                    <code>    cy.get('input.post-title').type('My First Post')</code>  
-                    <code>    cy.get('input.post-body').type('Hello, world!')</code>  
-                    <code>    cy.contains('Submit').click() </code>  
-                    <code>    cy.url().should('include', '/posts/my-first-post')</code>
-                    <code>    cy.get('h1').should('contain', 'My First Post')</code>  
-                    <code>  })</code>
-                    <code>})</code>
-            </pre>
+    <section class="slide" id="cover">
+        <h2>Testing login form</h2>
+            <figure>
+                <img class="cover mt-50" src="pictures/tricks.png">
+            </figure>
     </section>
 
-    <section class="slide">
+    <section class="slide" id="cover">
+        <h2>Hello world</h2>
+            <figure>
+                <img class="cover" src="pictures/hello world.png">
+            </figure>
+        </section>
+
+    <section class="slide center-slide">
             <h2>Running Cypress</h2>
             <pre>
+                <code>npm run start</code>
                 <code>npm run cypress:open</code>
-                <code>yarn run cypress open</code>
+                <code>yarn run cypress:open</code>
                 <code>npx cypress open</code>
             </pre>
     </section>
 
     <section class="slide" id="cover">
+            <h2>Cypress test runner</h2>
             <figure>
                 <img class="cover" src="pictures/open.png">
             </figure>
-        </section>
+    </section>
+
+        <section class="slide" id="cover">
+                <h2>Running test</h2>
+                <figure>
+                    <img class="cover mt-50" src="pictures/open1.png">
+                </figure>
+            </section>    
 
         <section class="slide">
             <h2>Differences from Selenium</h2>
-            <ol>
-                    <li>Behind Cypress is a Node.js server process</li>
-                    <li>Cypress is executed in the same run loop as your application.</li>
-                    <li>Cypress has native access to every single object</li>
-                    <li>Cypress takes snapshots of your application</li>
-                    <li>Stubbing network requests</li>
-                    <li>Spying & Stubbing on DOM API</li>
-                </ol>
+            <ul>
+                <li>Behind Cypress is a Node.js server process</li>
+                <li>Cypress is executed in the same run loop as your application.</li>
+                <li>Cypress has native access to every single object</li>
+                <li>Cypress takes snapshots of your application</li>
+                <li>Stubbing network requests</li>
+                <li>Spying & Stubbing on DOM API</li>
+                </ul>
         </section>
         
         <section class="slide">
@@ -183,12 +239,6 @@
             </pre>
         </section>
 
-        <section class="slide" id="cover">
-            <figure>
-                <img class="cover" src="pictures/man.jpg">
-            </figure>
-    </section>
-
     <section class="slide">
         <h2>Folder structure</h2>
         <figure>
@@ -249,12 +299,6 @@
     </section>
 
     <section class="slide" id="cover">
-        <figure>
-            <img class="cover" src="pictures/open1.png">
-        </figure>
-    </section>
-
-    <section class="slide" id="cover">
             <figure>
                 <img class="cover" src="pictures/snapshot.PNG">
             </figure>
@@ -302,13 +346,6 @@
                 <li>CI</li>
             </ul>
         </section>
-
-    <section class="slide" id="cover">
-            <figure>
-                <img class="cover" src="pictures/arch.png">
-            </figure>
-    </section>
-
 
     <section class="slide">
             <h2>Issues</h2>
