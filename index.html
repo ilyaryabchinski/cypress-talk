@@ -21,6 +21,9 @@
         .mt-50 {
             margin-top: 50px;
         }
+        .code-img {
+            width: 100% !important;
+        }
         
     </style>
 </head>
@@ -40,31 +43,36 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 80px">
-            Greeting slide
-        </h2>
-    </section>
+            <h2>Who am I ?</h2>
+            <ul>
+                <li>Front end developer at SaM Solutions</li>
+                <li>Working with Angular stack</li>
+                <li>Want you to try Cypress tomorrow</li>
+            </ul>
+            <img src="pictures/sam.jpg" alt=""> <img src="pictures/angular-512.png" height="100px">
+        </section>
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol>
-            <li>Why do(n't) we test?</li>
+        <ul>
+            <li>Why should(n't) we test?</li>
             <li>E2E testing tools</li>
-            <li>Cypress core concepts & features</li>
             <li>Experience with Cypress</li>
-            <li>Ups & downs</li>
-        </ol>
+            <li>Downsides</li>
+        </ul>
     </section>
 
     <section class="slide" id="cover">
+        <h2>Testing pyramid</h2>
         <figure>
-            <img class="cover" src="pictures/pyramid.png">
+            <img height="80%" class="cover mt-50" src="pictures/pyramid.png">
         </figure>
     </section>
 
     <section class="slide" id="cover">
+        <h2>Testing pyramid</h2>
         <figure>
-            <img class="cover" src="pictures/pyramid2.png">
+            <img height="80%" class="cover mt-50"  src="pictures/pyramid2.png">
         </figure>
     </section>
 
@@ -88,12 +96,6 @@
     </section>
 
     <section class="slide" id="cover">
-            <figure>
-                <img class="cover" src="pictures/man.jpg">
-            </figure>
-        </section>
-
-    <section class="slide" id="cover">
         <figure>
             <img class="cover" src="pictures/fm.png">
         </figure>
@@ -108,7 +110,23 @@
         </a>
     </section>
 
-    <section class="slide center-slide">
+    <section class="slide" id="14">
+            <h2>End to end testing strategies</h2>
+            <div class="columns two">
+                <ul>
+                    <li>Not to use real API calls</li>
+                    <li>Fast, easy and flexible</li>
+                    <li>No state mutations</li>
+                </ul>
+                <ul>
+                    <li>Simulate full workflow of application</li>
+                    <li>Requires server/DB</li>
+                    <li>Shares test state</li>
+                </ul>
+            </div>
+        </section>
+
+    <section class="slide">
             <h2>Installing Cypress</h2>
             <pre>
                 <code>npm install cypress --save-dev</code>
@@ -126,11 +144,11 @@
     <section class="slide" id="cover">
         <h2>Hello world</h2>
             <figure>
-                <img class="cover" src="pictures/hello world.png">
+                <img class="code-img" src="pictures/hello world.png">
             </figure>
         </section>
 
-    <section class="slide center-slide">
+    <section class="slide">
             <h2>Running Cypress</h2>
             <pre>
                 <code>npm run start</code>
@@ -143,14 +161,14 @@
     <section class="slide" id="cover">
             <h2>Cypress test runner</h2>
             <figure>
-                <img class="cover" src="pictures/open.png">
+                <img class="code-img" src="pictures/open.png">
             </figure>
     </section>
 
         <section class="slide" id="cover">
-                <h2>Running test</h2>
+                <h2>Running the test</h2>
                 <figure>
-                    <img class="cover mt-50" src="pictures/open1.png">
+                    <img class="code-img" src="pictures/open1.png">
                 </figure>
             </section>    
 
@@ -162,156 +180,90 @@
                 <li>Cypress has native access to every single object</li>
                 <li>Cypress takes snapshots of your application</li>
                 <li>Stubbing network requests</li>
-                <li>Spying & Stubbing on DOM API</li>
-                </ul>
+                <li>Spying & Stubbing on DOM API or any JS object</li>
+            </ul>
         </section>
-        
+
         <section class="slide">
-                <h2>Querying elements</h2>
-                <div style="display: flex">
-                        <pre>
-                                <code>cy.get('.main').contains('New Post')</code>
-                                <code> </code>
-                                <code>cy.get('#element')</code>
-                                <code>  .then(el => doSomethingAwesome(el))</code>
-                            </pre>
-                <span class="next"><img src="pictures/jquery.png" alt="" height="200" width="200"></span>
-                </div>
+            <h2>Folder structure</h2>
+            <figure>
+                <img width="40%" src="pictures/struct.png">
+            </figure>
+            </div>
         </section>
+
+        <section class="slide">
+            <h2>Basic configuration</h2>
+            <figure>
+                <img class="code-img" src="pictures/config.png">
+            </figure>
+            </div>
+        </section>
+
+        <section class="slide" id="cover">
+            <h2>Querying elements</h2>
+                <figure>
+                    <img class="code-img" src="pictures/get.png">
+                </figure>
+            </section>
+        
 
         <section class="slide">
             <h2>Commands</h2>
             <ul>
                 <li>.blur() - Make a focused DOM element blur.</li>
                 <li>.focus() - Focus on a DOM element.</li>
-                <li>.clear() - Clear the value of an input or textarea.</li>
+                <li>.viewport(320,240) - Simulate a viewport</li>
                 <li>.check() - Check checkbox(es) or radio(s).</li>
-                <li>.uncheck() - Uncheck checkbox(es).</li>
-                <li>.select() - Select an &lt;option&gt; within a &lt;select&gt;.</li>
+                <li>.screenshot() - Make a screenshot of current viewport.</li>
                 <li>.dblclick() - Double-click a DOM element.</li>
             </ul>
         </section>
 
-        <section class="slide">
-            <h2>Assert</h2>
-            <pre>
-                <code>cy.get(':checkbox').should('be.disabled')</code>
-            </pre>
-        </section>
-
-        <section class="slide">
-            <h2>Aliases</h2>
-            <pre>
-                <code>beforeEach(function () {</code>
-                <code>  cy.get('button').invoke('text').as('text')</code>    
-                <code>})</code>    
-                <code>it('has access to text', function () {</code>  
-                <code>  this.text  <span class="comment">// is now available</span></code>  
-                <code>})</code>
-            </pre>
-        </section>
-
-        <section class="slide">
-            <h2>Aliases</h2>
-            <pre>
-                <code>beforeEach(function () {</code>
-                <code>  cy.get('table').find('tr').as('rows')</code>    
-                <code>})</code>    
-                <code>it('has access to rows', function () {</code>  
-                <code>  this.rows  <span class="comment">// is now available</span></code>  
-                <code>})</code>
-            </pre>
-        </section>
-
-        <section class="slide">
-            <h2>Aliases</h2>
-            <pre>
-                <code>cy.get('@rows').first().click()</code>
-            </pre>
-        </section>
-
-        <section class="slide">
+        <section class="slide" id="cover">
             <h2>Custom commands</h2>
-            <pre>
-                <code>Cypress.Commands.add("login", (email, password) => { ... })</code>
-                <code><span class="comment">// somewhere in your test spec</span></code>
-                <code>cy.login()</code>
-            </pre>
+                <figure>
+                    <img class="code-img" src="pictures/custom.png">
+                </figure>
+            </section>
+
+        <section class="slide" id="cover">
+            <h2>Asserting</h2>
+                <figure>
+                    <img class="code-img" src="pictures/assert.png">
+                </figure>
         </section>
 
-    <section class="slide">
-        <h2>Folder structure</h2>
-        <figure>
-            <img src="pictures/structure.PNG">
-        </figure>
-        </div>
-    </section>
+        <section class="slide" id="cover">
+            <h2>Bundled tools</h2>
+                <figure>
+                    <img class="cover mt-50" src="pictures/mocha.png">
+                </figure>
+            </section>
 
-    <section class="slide">
-            <h2>Stub network requests</h2>
-            <pre>
-                    <code>cy.server();</code>
-                    <code>cy.fixture('bioprocess/bioprocess-list').as('processes')</code>
-                    <code>cy.route({</code>
-                    <code>  method: 'GET',</code>
-                    <code>  url: '/api/process-instances**',</code>
-                    <code>  response: '@processes'</code>  
-                    <code>}).as('getProcesses');</code>
-            </pre>
-    </section>
-
-    <section class="slide">
-            <h2>Selectors</h2>
-            <pre>
-                <code>const PROCESS_ITEM_ROW_SELECTOR = '.e2e-process-item-row';</code>
-                <code>const STOP_BUTTON_SELECTOR = '.e2e-stop-button';</code>
-                <code>const START_BUTTON_SELECTOR = '.e2e-start-button';</code>
-            </pre>
-            </div>
-    </section>
-
-    <section class="slide">
-            <h2>Test case</h2>
-            <pre>
-                    <code>it('should search in process list', () => {</code>
-                    <code>  const searchString = 'process';</code>
-                    <code>  cy.wait('@getProcesses');</code>
-                    <code>  cy.get(SEARCH_FIELD_SELECTOR).type(searchString);</code>
-                    <code>  cy.wait('@getProcesses').then(xhr => {,</code>
-                    <code>  expect(xhr.status).to.equal(200);</code>  
-                    <code>  expect(xhr.url).to.contain(`search=${searchString}`);</code>
-                    <code>  });</code>
-                    <code>});</code>  
-            </pre>
-    </section>
-
-    <section class="slide">
-            <h2>Run the test!</h2>
-            <pre>
-                <code>npx cypress open</code>
-            </pre>
-    </section>
-
-    <section class="slide" id="cover">
+        <section class="slide">
+            <h2>Aliases</h2>
             <figure>
-                <img class="cover" src="pictures/start.PNG">
+                <img class="code-img" src="pictures/aliases.png">
             </figure>
-    </section>
+        </section>
 
-    <section class="slide" id="cover">
-            <figure>
-                <img class="cover" src="pictures/snapshot.PNG">
-            </figure>
-    </section>
+        <section class="slide" id="cover">
+            <h2>Working with network</h2>
+                <figure>
+                    <img class="code-img mt-50" src="pictures/network.png">
+                </figure>
+            </section>
 
-    <section class="slide">
-            <h2>CI</h2>
-            <pre>
-                <code>http-server dist/qub-ui -c-1 -p 4200 --silent</code>
-                <code>npx cypress verify</code>
-                <code>npx cypress run</code>
-            </pre>
-    </section>
+        <section class="slide">
+            <h2>Other features</h2>
+            <ul>
+                <li>Plugins</li>
+                <li>Dashboard service</li>
+                <li>Screenshots & video</li>
+                <li>Continious integration</li>
+            </ul>
+        </section>
 
         <section class="slide">
             <h2>How does it works</h2>
@@ -323,38 +275,55 @@
         </section>
 
         <section class="slide">
-            <h2>Bundled libraries</h2>
+            <h2>Why do we like Cypress</h2>
             <ul>
-                <li>Mocha</li>
-                <li>Chai</li>
-                <li>Sinon</li>
-                <li>lodash</li>
-                <li>jQuery</li>
-                <li>minimatch</li>
-                <li>moment</li>
-                <li>Bluebird</li>
+                <li>Quick start</li>
+                <li>No more async hell</li>
+                <li>Easy to stub network layer</li>
+                <li>A lot of useful commands out of the box</li>
+                <li>Easy to integrate with CI system</li>
+                <li>Great debugging tools</li>
             </ul>
         </section>
 
         <section class="slide">
-            <h2>Other features</h2>
-            <ul>
-                <li>Plugins</li>
-                <li>Dashboard service</li>
-                <li>Screenshots & video</li>
-                <li>Server stub</li>
-                <li>CI</li>
-            </ul>
+            <h2>Continious integration</h2>
+            <pre>
+                <code>npm run build:prod</code>
+                <code>http-server dist/app -c-1 -p 4200 --silent</code>
+                <code>npx cypress verify</code>
+                <code>npx cypress run</code>
+            </pre>
+        </section>
+        <section class="slide" id="cover">
+                <h2>Debugging</h2>
+                    <figure>
+                        <img class="cover mt-50" src="pictures/debug.png">
+                    </figure>
+        </section>
+
+        <section class="slide" id="cover">
+                <h2>Debugging</h2>
+                    <figure>
+                        <img width="70%" class="cover mt-50" src="pictures/debug2.png">
+                    </figure>
         </section>
 
     <section class="slide">
-            <h2>Issues</h2>
+            <h2>Issues we found</h2>
             <ul>
                 <li>Can't store element in a variable</li>
                 <li>throw new Error() for server errors simulating</li>
                 <li>alert, confirm, file uploading</li>
                 <li>Overlay elements</li>
             </ul>
+    </section>
+
+    <section class="slide" id="cover">
+            <h2>There is no silver bullet</h2>
+                <figure>
+                    <img height="70%" class="cover mt-50" src="pictures/bullet.jpg">
+                </figure>
     </section>
 
     <section class="slide">
@@ -372,11 +341,11 @@
     <section class="slide">
             <h2>Temporary tradeoffs</h2>
             <ul>
-                <li>File uploads & downloads</li>
+                <li>File uploads & downloads (there is a plugin)</li>
                 <li>lack of commands like .tab() .hover() command</li>
                 <li>iframe support is limited</li>
                 <li>cy.route() for fetch (there is a workaround)</li>
-                <li>Shadow DOM is not supported</li>
+                <li>Shadow DOM is not supported (there is a plugin)</li>
             </ul>
     </section>
 
