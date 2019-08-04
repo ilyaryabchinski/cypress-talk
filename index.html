@@ -24,6 +24,10 @@
         .code-img {
             width: 100% !important;
         }
+        .center {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
         
     </style>
 </head>
@@ -44,22 +48,29 @@
 
     <section class="slide">
             <h2>Who am I ?</h2>
-            <ul>
-                <li>Front end developer at SaM Solutions</li>
-                <li>Working with Angular stack</li>
-                <li>Want you to try Cypress tomorrow</li>
-            </ul>
-            <img src="pictures/sam.jpg" alt=""> <img src="pictures/angular-512.png" height="100px">
+            <div class="center-slide">
+                <ul>
+                    <li>Front end developer at SaM Solutions</li>
+                    <li>Working with Angular stack</li>
+                    <li>Want you to try Cypress tomorrow</li>
+                </ul>
+            </div>
+            <div class="center-slide">
+                <img class="center" src="pictures/sam.jpg" alt=""> <img src="pictures/angular-512.png" height="100px">
+            </div>
+            
         </section>
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ul>
-            <li>Why should(n't) we test?</li>
-            <li>E2E testing tools</li>
-            <li>Experience with Cypress</li>
-            <li>Downsides</li>
-        </ul>
+        <div class="center-slide">
+            <ul>
+                <li>Why should(n't) we test?</li>
+                <li>E2E testing tools</li>
+                <li>Experience with Cypress</li>
+                <li>Downsides</li>
+            </ul>
+        </div>
     </section>
 
     <section class="slide" id="cover">
@@ -128,10 +139,13 @@
 
     <section class="slide">
             <h2>Installing Cypress</h2>
-            <pre>
-                <code>npm install cypress --save-dev</code>
-                <code>yarn add cypress --dev</code>
-            </pre>
+            <div class="center-slide">
+                <pre>
+                    <code>npm install cypress --save-dev</code>
+                    <code>yarn add cypress --dev</code>
+                </pre>
+            </div>
+            
     </section>
 
     <section class="slide" id="cover">
@@ -150,12 +164,15 @@
 
     <section class="slide">
             <h2>Running Cypress</h2>
-            <pre>
-                <code>npm run start</code>
-                <code>npm run cypress:open</code>
-                <code>yarn run cypress:open</code>
-                <code>npx cypress open</code>
-            </pre>
+            <div class="center-slide">
+                <pre>
+                    <code>npm run start</code>
+                    <code>npm run cypress:open</code>
+                    <code>yarn run cypress:open</code>
+                    <code>npx cypress open</code>
+                </pre>
+            </div>
+            
     </section>
 
     <section class="slide" id="cover">
@@ -174,21 +191,27 @@
 
         <section class="slide">
             <h2>Differences from Selenium</h2>
-            <ul>
-                <li>Behind Cypress is a Node.js server process</li>
-                <li>Cypress is executed in the same run loop as your application.</li>
-                <li>Cypress has native access to every single object</li>
-                <li>Cypress takes snapshots of your application</li>
-                <li>Stubbing network requests</li>
-                <li>Spying & Stubbing on DOM API or any JS object</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>Behind Cypress is a Node.js server process</li>
+                    <li>Cypress is executed in the same run loop as your application.</li>
+                    <li>Cypress has native access to every single object</li>
+                    <li>Cypress takes snapshots of your application</li>
+                    <li>Stubbing network requests</li>
+                    <li>Spying & Stubbing on DOM API or any JS object</li>
+                </ul>
+            </div>
+            
         </section>
 
         <section class="slide">
             <h2>Folder structure</h2>
-            <figure>
-                <img width="40%" src="pictures/struct.png">
-            </figure>
+            <div class="center-slide">
+                <figure>
+                    <img width="65%" src="pictures/struct.png">
+                </figure>
+            </div>
+            
             </div>
         </section>
 
@@ -210,14 +233,17 @@
 
         <section class="slide">
             <h2>Commands</h2>
-            <ul>
-                <li>.blur() - Make a focused DOM element blur.</li>
-                <li>.focus() - Focus on a DOM element.</li>
-                <li>.viewport(320,240) - Simulate a viewport</li>
-                <li>.check() - Check checkbox(es) or radio(s).</li>
-                <li>.screenshot() - Make a screenshot of current viewport.</li>
-                <li>.dblclick() - Double-click a DOM element.</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>.blur() - Make a focused DOM element blur.</li>
+                    <li>.focus() - Focus on a DOM element.</li>
+                    <li>.viewport(320,240) - Simulate a viewport</li>
+                    <li>.check() - Check checkbox(es) or radio(s).</li>
+                    <li>.screenshot() - Make a screenshot of current viewport.</li>
+                    <li>.dblclick() - Double-click a DOM element.</li>
+                </ul>
+            </div>
+            
         </section>
 
         <section class="slide" id="cover">
@@ -257,43 +283,55 @@
 
         <section class="slide">
             <h2>Other features</h2>
-            <ul>
-                <li>Plugins</li>
-                <li>Dashboard service</li>
-                <li>Screenshots & video</li>
-                <li>Continious integration</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>Plugins</li>
+                    <li>Dashboard service</li>
+                    <li>Screenshots & video</li>
+                    <li>Continious integration</li>
+                </ul>
+            </div>
+            
         </section>
 
         <section class="slide">
             <h2>How does it works</h2>
-            <ul>
-                <li>Chains of commands</li>
-                <li>Command queue</li>
-                <li>Timeouts</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>Chains of commands</li>
+                    <li>Command queue</li>
+                    <li>Timeouts</li>
+                </ul>
+            </div>
+            
         </section>
 
         <section class="slide">
             <h2>Why do we like Cypress</h2>
-            <ul>
-                <li>Quick start</li>
-                <li>No more async hell</li>
-                <li>Easy to stub network layer</li>
-                <li>A lot of useful commands out of the box</li>
-                <li>Easy to integrate with CI system</li>
-                <li>Great debugging tools</li>
-            </ul>
+            <dv class="center-slide">
+                <ul>
+                    <li>Quick start</li>
+                    <li>No more async hell</li>
+                    <li>Easy to stub network layer</li>
+                    <li>A lot of useful commands out of the box</li>
+                    <li>Easy to integrate with CI system</li>
+                    <li>Great debugging tools</li>
+                </ul>
+            </dv>
+            
         </section>
 
         <section class="slide">
             <h2>Continious integration</h2>
-            <pre>
-                <code>npm run build:prod</code>
-                <code>http-server dist/app -c-1 -p 4200 --silent</code>
-                <code>npx cypress verify</code>
-                <code>npx cypress run</code>
-            </pre>
+            <div class="center-slide">
+                <pre>
+                    <code>npm run build:prod</code>
+                    <code>http-server dist/app -c-1 -p 4200 --silent</code>
+                    <code>npx cypress verify</code>
+                    <code>npx cypress run</code>
+                </pre>
+            </div>
+            
         </section>
         <section class="slide" id="cover">
                 <h2>Debugging</h2>
@@ -311,12 +349,15 @@
 
     <section class="slide">
             <h2>Issues we found</h2>
-            <ul>
-                <li>Can't store element in a variable</li>
-                <li>throw new Error() for server errors simulating</li>
-                <li>alert, confirm, file uploading</li>
-                <li>Overlay elements</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>Can't store element in a variable</li>
+                    <li>throw new Error() for server errors simulating</li>
+                    <li>alert, confirm, file uploading</li>
+                    <li>Overlay elements</li>
+                </ul>
+            </div>
+            
     </section>
 
     <section class="slide" id="cover">
@@ -328,34 +369,42 @@
 
     <section class="slide">
             <h2>Permanent tradeoffs</h2>
-            <ul>
-                <li>Cypress is not a general purpose automation tool</li>
-                <li>Cross-browser support</li>
-                <li>Commands run inside of a browser</li>
-                <li>There will never be support for multiple browser tabs</li>
-                <li>You cannot use Cypress to drive two browsers at the same time</li>
-                <li>Each test is bound to a single origin</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>Cypress is not a general purpose automation tool</li>
+                    <li>Cross-browser support</li>
+                    <li>Commands run inside of a browser</li>
+                    <li>There will never be support for multiple browser tabs</li>
+                    <li>You cannot use Cypress to drive two browsers at the same time</li>
+                    <li>Each test is bound to a single origin</li>
+                </ul>
+            </div>
+            
     </section>
 
     <section class="slide">
             <h2>Temporary tradeoffs</h2>
-            <ul>
-                <li>File uploads & downloads (there is a plugin)</li>
-                <li>lack of commands like .tab() .hover() command</li>
-                <li>iframe support is limited</li>
-                <li>cy.route() for fetch (there is a workaround)</li>
-                <li>Shadow DOM is not supported (there is a plugin)</li>
-            </ul>
+            <div class="center-slide">
+                <ul>
+                    <li>File uploads & downloads (there is a plugin)</li>
+                    <li>lack of commands like .tab() .hover() command</li>
+                    <li>iframe support is limited</li>
+                    <li>cy.route() for fetch (there is a workaround)</li>
+                    <li>Shadow DOM is not supported (there is a plugin)</li>
+                </ul>
+            </div>
+            
     </section>
 
     <section class="slide">
             <h2>Links</h2>
-            <ul>
-                <li><a href="https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell">Cypress docs</a></li>
-                <li><a href="https://www.youtube.com/watch?v=5XQOK0v_YRE&t=1265s">Brian Mann – I see your point, but… (Part 1) - Assert(JS) 2018 </a></li>
-                <li><a href="https://www.youtube.com/watch?v=GH9Dvo_BYkk&t=1s">Avoiding The Suck Of Testing Using Cypress.io</a></li>
-            </ul>
+            <div class="center-side">
+                <ul>
+                    <li><a href="https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell">Cypress docs</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=5XQOK0v_YRE&t=1265s">Brian Mann – I see your point, but… (Part 1) - Assert(JS) 2018 </a></li>
+                    <li><a href="https://www.youtube.com/watch?v=GH9Dvo_BYkk&t=1s">Avoiding The Suck Of Testing Using Cypress.io</a></li>
+                </ul>
+            </div>
     </section>
 
     <section class="slide">
